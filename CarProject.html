@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            flex-direction: column;
+            background-color: black;
+        }
+        #box 
+        {
+            height: 500px;
+            width: 500px;
+            /* align-items: center; */
+            border: 5px solid;
+            background-repeat: no-repeat;
+            border-radius: 30px;
+
+            background-size: cover;
+        }
+        #box:hover {
+            border-color: black;
+            box-shadow: 0 0 30px red;
+
+        }
+        select {
+            margin-bottom: 20px;
+            width: 400px;
+            height: 50px;
+            font-size: 18px;
+            font-family: 'Times New Roman', Times, serif;
+            padding: 5px 10px;
+            border: 20px;
+            border-radius: 10px;
+        }
+        select:hover {
+          
+            box-shadow: 0 0 40px red;
+
+        }
+        #greet{
+            font-size: 24px;
+        }
+        #dateStamp {
+            font-size: 24px;
+            
+        }
+    </style>
+</head>
+<body>
+    <select name="" id="myCar" onchange="getCar()">
+        <option value="" disabled selected> Select your Car</option>
+        <option value="Land Rover">Land Rover</option>
+        <option value="Mercedes">Mercedes </option>
+        <option value="BMW">BMW</option>
+        <option value="rolls-Royce">Rolls-Royce</option>
+        <option value="Audi">Audi</option>
+
+    </select>
+    <div id="box"></div>
+    <p id="greet"></p>
+    <p id="dateStamp"></p>
+    <script>
+        let box1 = document.getElementById("box");
+        let gree1 = document.getElementById("greet");
+        let dateStamp1 = document.getElementById("dateStamp");
+        let myCar1 = document.getElementById("myCar");
+
+        function getCar() {
+            if (myCar1.value == "Land Rover") {
+                gree1.innerHTML = `Congratulations!!!!.. You have Selected is ${myCar1.value}`;
+                gree1.style.color = "red";
+                dateStamp1.innerHTML = `Booking Date ${new Date()}`;
+                dateStamp1.style.color = "Blue";
+                box1.style.backgroundImage = `url("https://c4.wallpaperflare.com/wallpaper/675/67/657/startech-land-rover-range-rover-black-land-rover-range-rover-wallpaper-preview.jpg")`
+            }
+            else if (myCar1.value == "Mercedes") {
+                gree1.innerHTML = `Congratulations!!!.. You have Selected ${myCar1.value}`;
+                gree1.style.color = "Red";
+                dateStamp1.innerHTML = `Booking Date ${new Date()}`;
+                dateStamp1.style.color = "Blue";
+                box1.style.backgroundImage = `url("https://i.pinimg.com/564x/fc/44/dc/fc44dcac41ed78c2175429595f4c9ca4.jpg")`;
+            }
+            else if (myCar1.value == "BMW") {
+                gree1.innerHTML = `Congratulations!!!.. You have Selected ${myCar1.value}`;
+                gree1.style.color = "Red";
+                dateStamp1.innerHTML = `Booking Date ${new Date()}`;
+                dateStamp1.style.color = "Blue";
+                box1.style.backgroundImage = `url("https://c4.wallpaperflare.com/wallpaper/819/755/830/bmw-m5-e39-car-wallpaper-preview.jpg")`;
+            }
+
+            else if (myCar1.value == "rolls-Royce") {
+                gree1.innerHTML = `Congratulations!!!.. You have Selected ${myCar1.value}`;
+                gree1.style.color = "Red";
+                dateStamp1.innerHTML = `Booking Date ${new Date()}`;
+                dateStamp1.style.color = "Blue";
+                box1.style.backgroundImage = `url("https://i.pinimg.com/originals/c1/d0/21/c1d021212f09bf48484af25321a917af.jpg")`;
+            }
+            else if (myCar1.value == "Audi") {
+                gree1.innerHTML = `Congratulations!!!.. You have Selected ${myCar1.value}`;
+                gree1.style.color = "Red";
+                dateStamp1.innerHTML = `Booking Date ${new Date()}`;
+                dateStamp1.style.color = "Blue";
+                 box1.style.backgroundImage = `url("https://c4.wallpaperflare.com/wallpaper/787/565/209/car-audi-audi-a6-lights-wallpaper-preview.jpg")`;
+            }
+
+        }
+    </script>
+</body>
+
+</html>
